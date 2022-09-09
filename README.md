@@ -9,7 +9,7 @@
      - Docker>==20.10.17
      - docker-compose>==1.29.4
 
-     - $ git clone ""
+     - $ git clone https://github.com/ismaeleliper/daftiTest.git
 
         (!) Verify if the ports 8000 and 5432 are available before giving next commands
 
