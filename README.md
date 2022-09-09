@@ -13,7 +13,7 @@
 
         (!) Verify if the ports 8000 and 5432 are available before giving next commands
 
-     - $ docker-compose up -d
+     - $ docker-compose up -d --build
 
      - Create a superuser to login
      - $ docker exec -it <web container-id> python3 web/manage.py createsuperuser
