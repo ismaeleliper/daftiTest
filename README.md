@@ -90,10 +90,10 @@ Price  | Decimal   | The unitary price of Shoes
 
         {
             "uuid": "ff2c24d1-747b-4e42-b540-ba79dd2f2b9c",
-            "model": "Yeezy",
+            "model": "Yeezy 2 ",
             "brand": "Adidas",
             "quantity": 2,
-            "price": "10.00000"
+            "price": 200
         }
 
 ### - DELETE: /api-shoes/delete/[uuid]
