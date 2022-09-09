@@ -52,7 +52,7 @@ Price  | Decimal   | The unitary price of Shoes
             "model": "Yeezy",
             "brand": "Adidas",
             "quantity": 2,
-            "price": "10.00000"
+            "price": 200
         }
 
 ### - GET: /api-shoes/all
@@ -64,7 +64,7 @@ Price  | Decimal   | The unitary price of Shoes
                 "model": "Yeezy",
                 "brand": "Adidas",
                 "quantity": 2,
-                "price": "10.00000"
+                "price": 200
             }
         ]
 
