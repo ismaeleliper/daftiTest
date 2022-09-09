@@ -1,0 +1,40 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:13.4-alpine
+    restart: always
+    user: postgres
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    environment:
+      - LC_ALL=C.UTF-8
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=db
+    ports:
+      - "5432:5432"
+    networks:
+      - postgres
+
+  web:
+    build: .
+    command: sh -c "python web/manage.py migrate && python web/manage.py runserver 0.0.0.0:8000"
+    volumes:
+      - .:/usr/src/web/zee
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    depends_on:
+      - db
+    networks:
+      - postgres
+      - django
+
+volumes:
+  postgres_data:
+
+networks:
+  postgres:
+  django:
